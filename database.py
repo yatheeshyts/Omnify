@@ -41,7 +41,7 @@ data = [
     ("Morning Zumba",datetime(2025, 6, 10, 8, 0).strftime("%Y-%m-%d %H:%M:%S"), datetime(2025, 6, 10, 9, 0).strftime("%Y-%m-%d %H:%M:%S"), "Dinesh", 5, 0),
     ("Morning",datetime(2025, 6, 10, 8, 30).strftime("%Y-%m-%d %H:%M:%S"), datetime(2025, 6, 10, 9, 30).strftime("%Y-%m-%d %H:%M:%S"), "Suresh", 5, 0),
 ]
-# cur.executemany("INSERT INTO CLASSES (name, start_time, end_time, instructor, no_of_slots, filled_slots) VALUES(?, ?, ?, ?, ?, ?)", data)
+cur.executemany("INSERT INTO CLASSES (name, start_time, end_time, instructor, no_of_slots, filled_slots) VALUES(?, ?, ?, ?, ?, ?)", data)
 # cur.execute("UPDATE CLASSES SET FILLED_SLOTS=2 WHERE CLASS_ID=1)")
 # cur.execute("SELECT * FROM BOOKINGS B, CLASSES C WHERE C.CLASS_ID=B.CLASS_ID and b.client_email='string1'")
 
