@@ -37,9 +37,9 @@ if not output:
 
 
 data = [
-    ("Evening Zumba",datetime(2025, 6, 10, 16, 0).strftime("%Y-%m-%d %H:%M:%S"), datetime(2025, 6, 10, 17, 0).strftime("%Y-%m-%d %H:%M:%S"), "Ramesh", 5, 0),
-    ("Morning Zumba",datetime(2025, 6, 10, 8, 0).strftime("%Y-%m-%d %H:%M:%S"), datetime(2025, 6, 10, 9, 0).strftime("%Y-%m-%d %H:%M:%S"), "Dinesh", 5, 0),
-    ("Morning",datetime(2025, 6, 10, 8, 30).strftime("%Y-%m-%d %H:%M:%S"), datetime(2025, 6, 10, 9, 30).strftime("%Y-%m-%d %H:%M:%S"), "Suresh", 5, 0),
+    ("Evening Zumba","2025-06-10 16:00:00", "2025-06-10 17:00:00", "Ramesh", 5, 0),
+    ("Morning Zumba","2025-06-10 08:00:00", "2025-06-10 09:00:00", "Dinesh", 5, 0),
+    ("Morning","2025-06-10 08:30:00", "2025-06-10 09:30:00", "Suresh", 5, 0),
 ]
 cur.executemany("INSERT INTO CLASSES (name, start_time, end_time, instructor, no_of_slots, filled_slots) VALUES(?, ?, ?, ?, ?, ?)", data)
 # cur.execute("UPDATE CLASSES SET FILLED_SLOTS=2 WHERE CLASS_ID=1)")
